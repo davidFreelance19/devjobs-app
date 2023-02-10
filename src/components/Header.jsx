@@ -3,13 +3,16 @@ import logo from "../assets/desktop/logo.svg";
 const Header = () => {
   return (
     <header>
-      <Link to="/">
-        <img src={logo} />
-      </Link>
-      <label className="switch">
-        <input type="checkbox" />
-        <span className="slider"></span>
-      </label>
+      <nav>
+        {" "}
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
+        <label className="switch">
+          <input type="checkbox" />
+          <span className="slider"></span>
+        </label>
+      </nav>
     </header>
   );
 };

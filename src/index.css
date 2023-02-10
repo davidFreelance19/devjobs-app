@@ -9,12 +9,17 @@
   --button-light-bg-color-hvr: #c5c9f4;
   --button-light-color: #5964e0;
 }
-
+body{
+  background-color: #f2f2f2;
+}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Kumbh Sans', sans-serif;
+}
+a:hover{
+  cursor: pointer;
 }
 header{
   width: 100%;
@@ -25,10 +30,65 @@ header{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+}
+nav{
   display: flex;
   justify-content: space-between;
-  padding: 2rem 6rem;
+  width: 65%;
+  margin: 0 auto;
+  padding-top: 2rem;
 }
+
+main{
+  width: 65%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 2rem;
+  row-gap: 4rem;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+}
+blockquote{
+  display: grid;
+}
+.card{
+  background-color: #fff;
+  height: 220px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 10px 15px 91px -81px rgba(0,0,0,0.61);
+-webkit-box-shadow: 10px 15px 91px -81px rgba(0,0,0,0.61);
+-moz-box-shadow: 10px 15px 91px -81px rgba(0,0,0,0.61);
+  padding: 1.9rem;
+}
+.container-logo{
+  position: absolute;
+  top: -10%;
+  left: 8%;
+  padding: 1.4rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 11px;
+}
+
+.card:hover{
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* The switch - the box around the slider */
 .switch {
   font-size: 17px;
