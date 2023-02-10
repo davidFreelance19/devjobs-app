@@ -8,18 +8,20 @@ const JobsProvider = ({ children }) => {
     const loader = document.getElementById("preloader");
     root?.removeChild(loader);
   };
+  const url = import.meta.env.VITE_DB;
   useEffect(() => {
     const consulta = async () => {
-      const datos = await fetch("/data.json");
+      const datos = await fetch(`${url}/data.json`);
       const resultado = await datos.json();
       setTrabajos(resultado);
     };
+    
+    consulta();
     const preloader = document.getElementById("preloader");
     preloader?.addEventListener("transitionend", handleTransition);
     setTimeout(() => {
-      preloader?.classList.remove("loading")
+      preloader?.classList.remove("loading");
     }, 3000);
-    consulta()
   }, []);
   return (
     <JobsContext.Provider value={{ trabajos }}>{children}</JobsContext.Provider>
