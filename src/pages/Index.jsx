@@ -5,7 +5,7 @@ const Index = () => {
   return (
     <main>
       {trabajos.map(trabajo => (
-        <Trabajo trabajo={trabajo} />
+        <Trabajo trabajo={trabajo} key={trabajo.id}/>
       ))}
     </main>
   );
