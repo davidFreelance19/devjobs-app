@@ -41,7 +41,7 @@ nav{
 }
 
 main{
-  width: 65%;
+  width: 1150px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3,1fr);

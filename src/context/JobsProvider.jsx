@@ -10,7 +10,7 @@ const JobsProvider = ({ children }) => {
   };
   useEffect(() => {
     const consulta = async () => {
-      const datos = await fetch("../../data.json");
+      const datos = await fetch("/data.json");
       const resultado = await datos.json();
       setTrabajos(resultado);
     };
